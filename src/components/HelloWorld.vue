@@ -8,9 +8,9 @@
 <script>
 export default {
   data () {
-	  return {
-  	  title: 'Food Tracker Application'
-	  }
+    return {
+      title: 'Food Tracker Application'
+      }
   }
 }
 </script>
