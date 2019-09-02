@@ -6,6 +6,8 @@ import Auth from '@okta/okta-vue'
 
 import Hello from './components/HelloWorld'
 
+import FoodRecords from '@/components/FoodRecords'
+
 Vue.use(Auth, {
   issuer: 'https://dev-923564.okta.com/oauth2/default',
   client_id: '0oa11617ua0dhaQTQ357',
@@ -16,6 +18,7 @@ Vue.use(Auth, {
 Vue.use(Router)
 
 let router =  new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -38,6 +41,14 @@ let router =  new Router({
     {
       path: '/implicit/callback',
       component: Auth.handleCallback()
+    },
+    {
+      path: '/food-records',
+      name: 'FoodRecords',
+      component: FoodRecords,
+      meta: {
+        requiresAuth: true
+      }
     },
   ]
 })
