@@ -1,5 +1,9 @@
 # food-tracker
 
+This project is based in the following totorial:
+
+https://developer.okta.com/blog/2018/08/27/build-crud-app-vuejs-netcore
+
 ## Project setup
 ```
 npm install
